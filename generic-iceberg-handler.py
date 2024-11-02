@@ -159,7 +159,7 @@ class DaftIcebergHandler:
             self.logger.error(f"Error deduplicating table: {e}")
             raise
 
-    def deduplicate_table_with_order(self, column_name: str = "article_url_hash", include_deleted: bool = True, keep='first'):
+    def deduplicate_table_with_order(self, column_name: str = "column_name", include_deleted: bool = True, keep='first'):
         """Deduplicates the table, keeping the first or last occurrence based on sorting."""
         try:
             df = self.read_data(include_deleted=include_deleted)
